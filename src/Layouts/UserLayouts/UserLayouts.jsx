@@ -20,7 +20,7 @@ import { Outlet } from 'react-router-dom'
 function UserLayouts() {
   return (
     <>
-    <div style={{backgroundColor:'#E5FAF7', width:'100%', height:'36rem'}}>
+    <div>
     <UserNavbar/>
       {/* Render nested routes */}
       <Outlet/>

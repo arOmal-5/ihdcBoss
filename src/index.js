@@ -5,14 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
 import { Toaster } from 'sonner';
+import MyProvider from './Store/MyProvider';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <MyProvider>
   <React.StrictMode>
     <BrowserRouter>
     <Toaster/>
     <App />
     </BrowserRouter>
   </React.StrictMode>
+  </MyProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
