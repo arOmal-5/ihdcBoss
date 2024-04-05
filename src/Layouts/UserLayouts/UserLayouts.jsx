@@ -20,7 +20,7 @@ import { Outlet } from 'react-router-dom'
 function UserLayouts() {
   return (
     <>
-    <div>
+    <div className='lg:mx-24'>
     <UserNavbar/>
       {/* Render nested routes */}
       <Outlet/>

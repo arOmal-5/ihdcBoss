@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import bossLogo from '../../Asset/PSD - BOSS Logo-Recovered.svg'
+import bossdarklogo from '../../Asset/BOSS Logo-4dark.png'
 import { MdNotificationsActive, MdDarkMode, MdOutlineDarkMode} from "react-icons/md";
 import { IoMdAddCircle } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
@@ -14,22 +15,23 @@ function UserNavbar() {
   const{isDark,setIsDark}=useContext(MyContext)
 
   const  color = isDark ? 'white' :'black'
+  const bodyBackgroundColor = isDark ? 'rgb(21, 32, 43)' : '#e5faf7';
 
   const handleDark = () => {
     setIsDark(a=>!a);
   };
 
- console.log(isDark);
+ console.log(isDark); 
 
 
   return (
     <>
-  <div className='mx-24 pt-4'>
+  <div className=' sticky top-0 'style={{ backgroundColor: bodyBackgroundColor, transition:'background-color 0.7s ease', paddingTop:'2rem'}}>
 
 
 
   <div className='flex justify-between items-center' style={{color:color}}>
-      <img src={bossLogo} alt="" className='w-44' />
+      <img src={isDark ? bossdarklogo : bossLogo } style={{transition:'background-color 0.7s ease'}} alt="" className='w-44' />
       <div className='flex flex-row gap-4'>
       <MdNotificationsActive className='text-xl' />
      {
@@ -45,7 +47,7 @@ function UserNavbar() {
 
       </div>
     </div>
-      <div className='bg-white flex gap-20 justify-center rounded-3xl border border-solid border-black mt-2 cursor-pointer'>
+      <div className='bg-white hidden lg:flex gap-20 justify-center rounded-3xl border border-solid border-black mt-2 cursor-pointer'>
         <p className='font-bold my-1 text-s'>DASH BOARD</p>
         <p className='font-bold my-1 text-s'>MARKETING</p>
         <p className='font-bold my-1 text-s'>OPERATIONS</p>

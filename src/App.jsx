@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-    <div style={{ backgroundColor: bodyBackgroundColor, transition:'background-color 0.7s ease', height:'36.6rem'}}>
+    <div style={{ backgroundColor: bodyBackgroundColor, transition:'background-color 0.7s ease', height:'55.6rem'}}>
       <Routes >
         <Route path="netmagics/*" element={<NetmagicsRoutes/>} />
         <Route path='user/*' element={<UserRoutes/>}/>
